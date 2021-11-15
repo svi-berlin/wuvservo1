@@ -3,20 +3,14 @@ input.onButtonPressed(Button.A, function () {
     pins.servoWritePin(AnalogPin.P1, 0)
 })
 input.onButtonPressed(Button.AB, function () {
-    basic.setLedColor(0x00ff00)
-    pins.servoWritePin(AnalogPin.P1, 90)
+    basic.setLedColor(0xff0000)
 })
 input.onButtonPressed(Button.B, function () {
     basic.setLedColor(0x0000ff)
-    pins.servoWritePin(AnalogPin.P1, 180)
 })
 serialmp3.connectSerialMp3(DigitalPin.C16, DigitalPin.C17)
-basic.setLedColor(0x00ff00)
 serialmp3.playMp3Track(1, 1)
-basic.pause(1000)
-basic.setLedColor(0xffffff)
-pins.servoWritePin(AnalogPin.P1, 90)
-basic.setLedColor(0xff0000)
+basic.setLedColor(0x00ff00)
 basic.forever(function () {
     basic.showIcon(IconNames.Heart)
     basic.pause(200)
